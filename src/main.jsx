@@ -9,6 +9,9 @@ import Root from './components/Root.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import Home from './pages/Home.jsx';
 import AddCraftItem from './pages/AddCraftItem.jsx';
+import Register from './pages/Register.jsx';
+import Login from './pages/Login.jsx';
+import AuthProvider from './providers/AuthProvider.jsx';
 
 
 const router = createBrowserRouter([
@@ -26,6 +29,14 @@ const router = createBrowserRouter([
         path: "/add-craft-item",
         element: <AddCraftItem></AddCraftItem>
       },
+      {
+        path: '/register',
+        element: <Register></Register>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      }
     ]
   },
 ]);
@@ -33,6 +44,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

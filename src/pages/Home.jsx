@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import CraftItemCard from "../components/CraftItemCard";
 
 
 const Home = () => {
@@ -7,8 +8,9 @@ const Home = () => {
 
     return (
         <div>
-            <h1 className="text-4xl text-red-800">Home page</h1>
-            <p>length: {loadedCrafts.length}</p>
+            {
+                loadedCrafts.slice(0, 20).map(craftItem => <CraftItemCard key={craftItem._id} craftItem={craftItem}></CraftItemCard>)
+            }
         </div>
     );
 };
