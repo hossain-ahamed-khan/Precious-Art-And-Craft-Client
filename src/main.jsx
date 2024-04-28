@@ -8,6 +8,7 @@ import {
 import Root from './components/Root.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import Home from './pages/Home.jsx';
+import AddCraftItem from './pages/AddCraftItem.jsx';
 
 
 const router = createBrowserRouter([
@@ -18,8 +19,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
-      }
+        element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/craftItems')
+      },
+      {
+        path: "/add-craft-item",
+        element: <AddCraftItem></AddCraftItem>
+      },
     ]
   },
 ]);
