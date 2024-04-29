@@ -52,14 +52,7 @@ const Register = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        if (data.insertedId) {
-                            Swal.fire({
-                                title: 'Success!',
-                                text: 'User Registered Successfully',
-                                icon: 'success',
-                                confirmButtonText: 'Ok'
-                            })
-                        }
+                        console.log(data)
                     })
 
                 navigate("/");
