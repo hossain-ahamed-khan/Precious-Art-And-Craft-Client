@@ -148,7 +148,7 @@ const AddCraftItem = () => {
                     </label>
                 </div>
 
-                <input className="my-6 w-full py-2 bg-[#fe5000d5] rounded-lg cursor-pointer text-slate-200 text-xl font-semi-bold" type="submit" value="Add" />
+                <input className="my-6 w-full py-2 bg-[#803D3B] rounded-lg cursor-pointer text-slate-200 text-xl font-semi-bold" type="submit" value="Add" />
 
             </form>
         </div>

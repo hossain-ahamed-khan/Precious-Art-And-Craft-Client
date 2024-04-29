@@ -29,7 +29,7 @@ const Header = () => {
                             <li><Link to="/my-craft-items">My Art&Craft List</Link></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <Link to="/" className="btn btn-ghost text-xl">Nokkhotro Art & Crafts</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

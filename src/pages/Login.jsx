@@ -85,7 +85,7 @@ const Login = () => {
                         }
 
                         <div className="form-control mt-6">
-                            <button className="btn bg-[#053a37b9] text-slate-100">Login</button>
+                            <button className="btn bg-[#803D3B] text-slate-100">Login</button>
                         </div>
                     </form>
 
@@ -95,7 +95,7 @@ const Login = () => {
                     </div>
 
                     <div className="text-center my-6">
-                        I have no account. Want to <Link className="font-bold text-[#053A37]" to="/register">Register</Link>
+                        I have no account. Want to <Link className="font-bold text-[#803D3B]" to="/register">Register</Link>
                     </div>
                 </div>
             </div>

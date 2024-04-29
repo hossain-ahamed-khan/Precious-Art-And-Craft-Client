@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { AuthContext } from "../providers/AuthProvider";
-import Swal from 'sweetalert2';
+
 
 const Register = () => {
 
@@ -109,12 +109,12 @@ const Register = () => {
                         }
 
                         <div className="form-control mt-6">
-                            <button className="btn bg-[#053a37b9] text-slate-100">Register</button>
+                            <button className="btn bg-[#803D3B] text-slate-100">Register</button>
                         </div>
                     </form>
 
                     <div className="text-center mb-8">
-                        Already have no account. Want to <Link className="font-bold text-[#053A37]" to="/login">Login</Link>
+                        Already have no account. Want to <Link className="font-bold text-[#803D3B]" to="/login">Login</Link>
                     </div>
                 </div>
             </div>
