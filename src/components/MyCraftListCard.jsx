@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const MyCraftListCard = ({ craft }) => {
+const MyCraftListCard = ({ craft, handleDelete }) => {
 
     const { _id, itemName, customization, status, imageURL, price, rating } = craft;
     return (
@@ -16,7 +16,7 @@ const MyCraftListCard = ({ craft }) => {
                     <div className="card-actions justify-between">
                         <p>{status}</p>
                         <Link to={`/updateCraft/${_id}`}><button className="btn bg-[#803D3B] text-slate-200">Edit</button></Link>
-                        <Link to={`/crafts/${_id}`}><button className="btn bg-[#803D3B] text-slate-200">Delete</button></Link>
+                        <Link onClick={() => handleDelete(_id)}><button className="btn bg-[#803D3B] text-slate-200">Delete</button></Link>
                     </div>
                 </div>
             </div>
@@ -26,6 +26,7 @@ const MyCraftListCard = ({ craft }) => {
 
 MyCraftListCard.propTypes = {
     craft: PropTypes.object,
+    handleDelete: PropTypes.object,
 }
 
 export default MyCraftListCard;
