@@ -9,10 +9,10 @@ const MyCraftListCard = ({ craft, handleDelete }) => {
             <div className="card w-96 glass">
                 <figure><img className='w-96 h-64' src={imageURL} alt="car!" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">{itemName}</h2>
-                    <p>{customization}</p>
-                    <p>{price}</p>
-                    <p>{rating}</p>
+                    <h2 className="card-title font-bold">{itemName}</h2>
+                    <p><span className='font-bold'>Customizable:</span> {customization}</p>
+                    <p><span className='font-bold'>Price:</span> {price}</p>
+                    <p><span className='font-bold'>Rating:</span> {rating}</p>
                     <div className="card-actions justify-between">
                         <p>{status}</p>
                         <Link to={`/updateCraft/${_id}`}><button className="btn bg-[#803D3B] text-slate-200">Edit</button></Link>

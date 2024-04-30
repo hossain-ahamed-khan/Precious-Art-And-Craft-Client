@@ -28,11 +28,12 @@ const MyCraftsList = () => {
                 if (data.deletedCount > 0) {
                     setControl(!control);
                     Swal.fire({
-                        title: 'Success!',
-                        text: 'Deleted Successfully',
-                        icon: 'denger',
-                        confirmButtonText: 'Cool'
-                    })
+                        position: "center",
+                        icon: "success",
+                        title: "successfully Deleted",
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
                 }
             })
     }
