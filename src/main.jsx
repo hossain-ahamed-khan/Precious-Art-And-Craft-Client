@@ -40,6 +40,7 @@ const router = createBrowserRouter([
       {
         path: "/my-craft-items",
         element: <PrivateRoute><MyCraftsList></MyCraftsList></PrivateRoute>
+
       },
       {
         path: '/register',
