@@ -29,12 +29,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/craftItems')
+        loader: () => fetch('https://art-and-crafts-server-b63gyc395-hossains-projects-89628cd5.vercel.app/craftItems')
       },
       {
         path: "/all-craft-items",
         element: <AllCraftsItems></AllCraftsItems>,
-        loader: () => fetch('http://localhost:5000/craftItems')
+        loader: () => fetch('https://art-and-crafts-server-b63gyc395-hossains-projects-89628cd5.vercel.app/craftItems')
       },
       {
         path: "/craftItems/:id",
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       {
         path: '/updateCraft/:id',
         element: <UpdateMyCraft></UpdateMyCraft>,
-        loader: ({ params }) => fetch(`http://localhost:5000/CraftItems/${params.id}`)
+        loader: ({ params }) => fetch(`https://art-and-crafts-server-b63gyc395-hossains-projects-89628cd5.vercel.app/CraftItems/${params.id}`)
       },
       {
         path: '/register',
