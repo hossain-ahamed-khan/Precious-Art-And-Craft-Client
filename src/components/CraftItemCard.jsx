@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const CraftItemCard = ({ craftItem }) => {
 
-    const { itemName, subcategory, status, imageURL } = craftItem;
+    const { _id, itemName, subcategory, status, imageURL } = craftItem;
     return (
         <div>
             <div className="card w-96 glass">
@@ -12,7 +13,7 @@ const CraftItemCard = ({ craftItem }) => {
                     <p>{subcategory}</p>
                     <div className="card-actions justify-between">
                         <p>{status}</p>
-                        <button className="btn bg-[#803D3B] text-slate-200">View Details</button>
+                        <Link to={`craftItems/${_id}`}><button className="btn bg-[#803D3B] text-slate-200">View Details</button></Link>
                     </div>
                 </div>
             </div>

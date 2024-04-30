@@ -15,6 +15,8 @@ import AuthProvider from './providers/AuthProvider.jsx';
 import AllCraftsItems from './pages/AllCraftsItems.jsx';
 import MyCraftsList from './pages/MyCraftsList.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
+import CraftItemDetails from './pages/CraftItemDetails.jsx';
+import UpdateMyCraft from './pages/UpdateMyCraft.jsx';
 
 
 
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
         element: <AllCraftsItems></AllCraftsItems>
       },
       {
+        path: "/craftItems/:id",
+        element: <CraftItemDetails></CraftItemDetails>
+      },
+      {
         path: "/add-craft-items",
         element: <PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>
       },
@@ -41,6 +47,11 @@ const router = createBrowserRouter([
         path: "/my-craft-items",
         element: <PrivateRoute><MyCraftsList></MyCraftsList></PrivateRoute>
 
+      },
+      {
+        path: 'updateCraft/:id',
+        element: <UpdateMyCraft></UpdateMyCraft>,
+        loader: ({ params }) => fetch(`http://localhost:5000/CraftItems/${params.id}`)
       },
       {
         path: '/register',
