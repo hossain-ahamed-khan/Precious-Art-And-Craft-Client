@@ -1,6 +1,11 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../providers/AuthProvider';
 
 const AddCraftItem = () => {
+
+    const { user } = useContext(AuthContext);
+
 
     const handleAddCraftItem = event => {
         event.preventDefault();
@@ -137,14 +142,14 @@ const AddCraftItem = () => {
                         <div className="label">
                             <span className="label-text">User Name:</span>
                         </div>
-                        <input type="text" name="userName" required placeholder="" className="input input-bordered w-full " />
+                        <input type="text" name="userName" defaultValue={user?.displayName} required placeholder="" className="input input-bordered w-full " />
                     </label>
 
                     <label className="form-control w-full">
                         <div className="label">
                             <span className="label-text">User Email:</span>
                         </div>
-                        <input type="email" name="userEmail" required placeholder="" className="input input-bordered w-full " />
+                        <input type="email" name="userEmail" defaultValue={user?.email} required placeholder="" className="input input-bordered w-full " />
                     </label>
                 </div>
 
