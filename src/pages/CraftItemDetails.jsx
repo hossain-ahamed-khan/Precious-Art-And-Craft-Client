@@ -20,14 +20,14 @@ const CraftItemDetails = () => {
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src={craft.imageURL} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>
-                    <h1 className="text-5xl font-bold">{craft.itemName}</h1>
-                    <p className="">{craft.itemDescription}</p>
-                    <p className="">{craft.subcategory}</p>
-                    <p className="">{craft.customization}</p>
-                    <p className="">{craft.status}</p>
-                    <p className="">{craft.processingTime}</p>
-                    <p className="">{craft.price}</p>
-                    <p className="">{craft.rating}</p>
+                    <h1 className="text-5xl font-bold my-2">{craft.itemName}</h1>
+                    <p className="my-2">{craft.itemDescription}</p>
+                    <p><span className="font-bold">Subcategory:</span> {craft.subcategory}</p>
+                    <p><span className="font-bold">Is it Customizable:</span> {craft.customization}</p>
+                    <p><span className="font-bold">Status:</span> {craft.status}</p>
+                    <p><span className="font-bold">Processing Time:</span> {craft.processingTime}min</p>
+                    <p><span className="font-bold">Price:</span> {craft.price}BDT</p>
+                    <p><span className="font-bold">Rating:</span> {craft.rating}</p>
 
                 </div>
             </div>
