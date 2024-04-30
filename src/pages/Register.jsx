@@ -43,7 +43,7 @@ const Register = () => {
                 const createdAt = result.user?.metadata?.creationTime;
                 const user = { email, createdAt: createdAt };
 
-                fetch("https://art-and-crafts-server-b63gyc395-hossains-projects-89628cd5.vercel.app/user", {
+                fetch("https://art-and-crafts-server-joeho99wn-hossains-projects-89628cd5.vercel.app/user", {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

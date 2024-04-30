@@ -11,7 +11,7 @@ const MyCraftsList = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch(`https://art-and-crafts-server-b63gyc395-hossains-projects-89628cd5.vercel.app/myCrafts/${user?.email}`)
+        fetch(`https://art-and-crafts-server-joeho99wn-hossains-projects-89628cd5.vercel.app/myCrafts/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -20,7 +20,7 @@ const MyCraftsList = () => {
     }, [user, control])
 
     const handleDelete = (id) => {
-        fetch(`https://art-and-crafts-server-b63gyc395-hossains-projects-89628cd5.vercel.app/deleteCraft/${id}`, {
+        fetch(`https://art-and-crafts-server-joeho99wn-hossains-projects-89628cd5.vercel.app/deleteCraft/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())
