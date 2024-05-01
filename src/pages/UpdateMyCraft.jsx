@@ -26,7 +26,7 @@ const UpdateMyCraft = () => {
         console.log(updatedCraftItem);
 
         // send data to the server
-        fetch(`https://art-and-crafts-server.vercel.app/${_id}`, {
+        fetch(`https://art-and-crafts-server-94b3mfc19-hossains-projects-89628cd5.vercel.app/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
