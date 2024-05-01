@@ -8,7 +8,7 @@ const CraftItemDetails = () => {
     const [craft, setCraft] = useState({});
 
     useEffect(() => {
-        fetch(`https://art-and-crafts-server-joeho99wn-hossains-projects-89628cd5.vercel.app/craftItems/${id}`)
+        fetch(`https://art-and-crafts-server.vercel.app/${id}`)
             .then(res => res.json())
             .then(data => {
                 setCraft(data)
