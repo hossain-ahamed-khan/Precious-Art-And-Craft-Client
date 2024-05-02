@@ -28,7 +28,7 @@ const AddCraftItem = () => {
 
         // send data to the server 
 
-        fetch("https://art-and-crafts-server-94b3mfc19-hossains-projects-89628cd5.vercel.app", {
+        fetch("https://art-and-crafts-server.vercel.app/craftItems", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
