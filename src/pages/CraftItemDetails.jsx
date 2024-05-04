@@ -18,9 +18,9 @@ const CraftItemDetails = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={craft.imageURL} className="max-w-sm rounded-lg shadow-2xl" />
-                <div>
-                    <h1 className="text-5xl font-bold my-2">{craft.itemName}</h1>
+                <img src={craft.imageURL} className="w-3/5 rounded-lg shadow-2xl" />
+                <div className="w-2/5">
+                    <h1 className="text-xl md:text-3xl lg:text-5xl font-bold my-2">{craft.itemName}</h1>
                     <p className="my-2">{craft.itemDescription}</p>
                     <p><span className="font-bold">Subcategory:</span> {craft.subcategory}</p>
                     <p><span className="font-bold">Is it Customizable:</span> {craft.customization}</p>
