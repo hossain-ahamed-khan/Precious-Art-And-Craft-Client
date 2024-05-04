@@ -19,13 +19,68 @@ const Home = () => {
 
     return (
         <>
-            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/jgRqxDg/Scrapbooking-2.jpg)' }}>
-                <div className="hero-overlay bg-opacity-60"></div>
-                <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Paper Crafts & Glass Art Gallery</h1>
-                        <p className="mb-5">Dive into the captivating realm of paper crafts and glass artistry. Discover stunning creations, expert tutorials, and unleash your creativity with our curated resources and community.</p>
+            <div className="carousel w-full h-[600px]">
+                <div id="slide1" className="carousel-item relative w-full">
+                    <img src="https://i.ibb.co/jgRqxDg/Scrapbooking-2.jpg" className="w-full" />
+
+                    <div className="absolute text-center w-full h-full flex justify-center items-center text-slate-800 backdrop-blur-sm">
+                        <div>
+                            <h1 className="mb-5 text-5xl font-bold">Explore Paper Crafts & Glass Art Masterpieces Online</h1>
+                            <p className="mb-5 w-3/5 mx-auto">Unleash your creativity with our curated collection of exquisite paper crafts and stunning glass art. Dive into a world of inspiration, tutorials, and supplies to ignite your passion for crafting.</p>
+                        </div>
                     </div>
+
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" className="btn btn-circle">❮</a>
+                        <a href="#slide2" className="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" className="carousel-item relative w-full">
+                    <img src="https://i.ibb.co/TBksJXg/card-making-2.jpg" className="w-full" />
+
+                    <div className="absolute text-center w-full h-full flex justify-center items-center text-slate-200 backdrop-blur-sm">
+                        <div>
+                            <h1 className="mb-5 text-5xl font-bold">Explore Paper Crafts & Glass Art Masterpieces Online</h1>
+                            <p className="mb-5 w-3/5 mx-auto">Unleash your creativity with our curated collection of exquisite paper crafts and stunning glass art. Dive into a world of inspiration, tutorials, and supplies to ignite your passion for crafting.</p>
+                        </div>
+                    </div>
+
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" className="btn btn-circle">❮</a>
+                        <a href="#slide3" className="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" className="carousel-item relative w-full">
+                    <img src="https://i.ibb.co/6464mMg/Glass-Dying-Staining-1.jpg" className="w-full" />
+
+                    <div className="absolute text-center w-full h-full flex justify-center items-center text-slate-800 backdrop-blur-sm">
+                        <div>
+                            <h1 className="mb-5 text-5xl font-bold">Explore Paper Crafts & Glass Art Masterpieces Online</h1>
+                            <p className="mb-5 w-3/5 mx-auto">Unleash your creativity with our curated collection of exquisite paper crafts and stunning glass art. Dive into a world of inspiration, tutorials, and supplies to ignite your passion for crafting.</p>
+                        </div>
+                    </div>
+
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" className="btn btn-circle">❮</a>
+                        <a href="#slide4" className="btn btn-circle">❯</a>
+                    </div>
+
+                </div>
+                <div id="slide4" className="carousel-item relative w-full">
+                    <img src="https://i.ibb.co/8YcDZ9d/Lampworking-1.jpg" className="w-full" />
+
+                    <div className="absolute text-center w-full h-full flex justify-center items-center text-slate-200 backdrop-blur-sm">
+                        <div>
+                            <h1 className="mb-5 text-5xl font-bold">Explore Paper Crafts & Glass Art Masterpieces Online</h1>
+                            <p className="mb-5 w-3/5 mx-auto">Unleash your creativity with our curated collection of exquisite paper crafts and stunning glass art. Dive into a world of inspiration, tutorials, and supplies to ignite your passion for crafting.</p>
+                        </div>
+                    </div>
+
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" className="btn btn-circle">❮</a>
+                        <a href="#slide1" className="btn btn-circle">❯</a>
+                    </div>
+
                 </div>
             </div>
 

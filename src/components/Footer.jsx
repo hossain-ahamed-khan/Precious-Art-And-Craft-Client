@@ -6,7 +6,7 @@ const Footer = () => {
             <footer className="footer footer-center p-10 bg-[#803D3B] text-primary-content">
                 <aside>
                     <p className="font-bold text-xl">
-                        Nokkhotro Art & Crafts since 1992
+                        Nokkhotro Art & Crafts
                     </p>
                     <p>Copyright © 2024 - All right reserved</p>
                 </aside>

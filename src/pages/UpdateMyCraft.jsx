@@ -53,7 +53,7 @@ const UpdateMyCraft = () => {
 
                 <div className="grid grid-cols-2 gap-4">
 
-                    <label className="form-control w-full ">
+                    <label className="form-control w-full">
                         <div className="label">
                             <span className="label-text">Item name:</span>
                         </div>
