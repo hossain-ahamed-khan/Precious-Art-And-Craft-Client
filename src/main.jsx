@@ -17,6 +17,7 @@ import MyCraftsList from './pages/MyCraftsList.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
 import CraftItemDetails from './pages/CraftItemDetails.jsx';
 import UpdateMyCraft from './pages/UpdateMyCraft.jsx';
+import SubcategoryDetails from './pages/SubcategoryDetails.jsx';
 
 
 
@@ -47,12 +48,16 @@ const router = createBrowserRouter([
       {
         path: "/my-craft-items",
         element: <PrivateRoute><MyCraftsList></MyCraftsList></PrivateRoute>
-
       },
       {
         path: '/updateCraft/:id',
         element: <UpdateMyCraft></UpdateMyCraft>,
         loader: ({ params }) => fetch(`https://art-and-crafts-server.vercel.app/craftItems/${params.id}`)
+      },
+      {
+        path: "/subcategory/:subcategory_name",
+        element: <SubcategoryDetails></SubcategoryDetails>,
+        loader: () => fetch('https://art-and-crafts-server.vercel.app/craftItems')
       },
       {
         path: '/register',

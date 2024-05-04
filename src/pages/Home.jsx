@@ -1,10 +1,21 @@
 import { useLoaderData } from "react-router-dom";
 import CraftItemCard from "../components/CraftItemCard";
+import { useEffect, useState } from "react";
+import SubCategoryCard from "../components/SubCategoryCard";
 
 
 const Home = () => {
-
     const loadedCrafts = useLoaderData();
+
+    const [subcategories, setSubcategories] = useState([]);
+
+    useEffect(() => {
+        fetch('https://art-and-crafts-server.vercel.app/subcategories')
+            .then(res => res.json())
+            .then(data => {
+                setSubcategories(data);
+            })
+    })
 
     return (
         <>
@@ -18,16 +29,38 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="my-16 w-3/5 mx-auto">
-                <h1 className="text-center text-3xl font-bold my-6">Craft Items Section</h1>
-                <p className="text-center">Browse our extensive collection of high-quality craft supplies and materials for paper crafts and glass art projects. From basics to specialty items, find everything you need to bring your creations to life.</p>
-            </div>
 
-            <div className="w-10/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 my-8">
-                {
-                    loadedCrafts.slice(0, 6).map(craftItem => <CraftItemCard key={craftItem._id} craftItem={craftItem}></CraftItemCard>)
-                }
-            </div>
+            {/* Craft Items Section  */}
+
+            <section>
+                <div className="my-16 w-3/5 mx-auto">
+                    <h1 className="text-center text-3xl font-bold my-6">Craft Items Section</h1>
+                    <p className="text-center">Browse our extensive collection of high-quality craft supplies and materials for paper crafts and glass art projects. From basics to specialty items, find everything you need to bring your creations to life.</p>
+                </div>
+
+                <div className="w-10/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 my-10">
+                    {
+                        loadedCrafts.slice(0, 6).map(craftItem => <CraftItemCard key={craftItem._id} craftItem={craftItem}></CraftItemCard>)
+                    }
+                </div>
+            </section>
+
+
+            {/* Art & Craft Categories Section  */}
+
+            <section>
+                <div className="my-16 w-3/5 mx-auto">
+                    <h1 className="text-center text-3xl font-bold my-6">Craft Items Section</h1>
+                    <p className="text-center">Browse our extensive collection of high-quality craft supplies and materials for paper crafts and glass art projects. From basics to specialty items, find everything you need to bring your creations to life.</p>
+                </div>
+
+                <div className="w-10/12 mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 my-20">
+                    {
+                        subcategories.map(category => <SubCategoryCard key={category._id} category={category}></SubCategoryCard>)
+                    }
+
+                </div>
+            </section>
         </>
     );
 };
