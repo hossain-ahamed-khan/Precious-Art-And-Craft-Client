@@ -7,7 +7,7 @@ const AllCraftsItems = () => {
     const loadedCrafts = useLoaderData();
 
     return (
-        <div>
+        <div className="my-24">
             <div className="overflow-x-auto w-10/12 mx-auto">
                 <table className="table">
                     {/* head */}

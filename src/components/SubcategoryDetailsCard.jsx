@@ -16,7 +16,7 @@ const SubcategoryDetailsCard = ({ categoryItem }) => {
                     <p><span className="font-bold">Price:</span> {price}BDT</p>
                     <p><span className="font-bold">Rating:</span> {rating}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/craftItems/${_id}`}><button className="btn btn-primary">View Details</button></Link>
+                        <Link to={`/craftItems/${_id}`}><button className="btn bg-[#803D3B] text-slate-200">View Details</button></Link>
                     </div>
                 </div>
             </div>
